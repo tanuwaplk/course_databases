@@ -51,5 +51,5 @@ from users;
 
 select id,
 (number_of_groups*0.1 + number_of_posts*0.5 + number_of_likes*0.3 + total_friends*0.2 + number_of_messages*0.4) as activity_score
-from users_activity order by activity_score limit 1;
+from users_activity order by activity_score limit 10;
 
