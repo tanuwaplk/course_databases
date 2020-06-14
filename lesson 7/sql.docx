@@ -1,0 +1,15 @@
+use shop;
+
+
+SELECT * FROM users
+WHERE EXISTS (SELECT 1 FROM orders WHERE user_id = users.id);
+
+SELECT
+  products.name as product,
+  catalogs.name as catalog_name
+FROM
+  products
+RIGHT JOIN
+  catalogs
+ON
+  catalogs.id = products.catalog_id;
